@@ -101,14 +101,14 @@ function App() {
     });
   };
 
-  const embedJitsi = () => {
-    const script = document.createElement("script");
-    script.src = "https://meet.jit.si/external_api.js";
-    script.onload = () => startMeeting();
-    document.body.appendChild(script);
-  };
-
   useEffect(() => {
+    const embedJitsi = () => {
+      const script = document.createElement("script");
+      script.src = "https://meet.jit.si/external_api.js";
+      script.onload = () => startMeeting();
+      document.body.appendChild(script);
+    };
+
     setTimeout(() => {
       embedJitsi();
     }, 4000);
